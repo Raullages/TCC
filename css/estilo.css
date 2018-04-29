@@ -1,0 +1,153 @@
+/* @media only screen and  (min-width: 1024px) and (max-width: 1920px) { */
+
+body{
+	margin: 0;
+	padding: 0;
+	background: linear-gradient(to top right, lightblue, #fff);
+}
+.carregando{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background-color: rgba(0,0,0, 0.8);
+	z-index: 999;
+	display: none;
+
+}
+.carregando img{
+	position: absolute;
+	width: 250px;
+	height: 250px;
+	left: 50%;
+	margin-left: -125px;
+	top: 50%;
+	margin-top: -125px;
+
+}
+.icon-bar{
+	background-color: #fff;
+}
+.header{
+	background: #397ab7;
+	position: fixed;
+	width: 100%;
+	z-index: 997;
+	box-shadow: 0px 1px 5px #777;
+	height: 80px;
+}
+.header a{
+	color: #fff;
+}
+.header .sair{
+	margin-top: 15px;
+	float: right;
+	margin-right: 100px;
+}
+.bg-menu{
+	z-index: 995;
+	margin-top: 80px;
+	position: fixed;
+	margin-left: -30px;
+	background-color: #8BACCD ;
+	height: 100%;
+	box-shadow: 1px 0px 8px #aaa;
+}
+
+.menu{
+	margin-top: 40px;
+	border-radius: 5px;
+	height: 663px;
+
+
+}
+.menu ul li a{
+	color: #fff;
+	/*text-shadow: 0px 1px 1px black;*/
+	/* border-bottom: 1px solid #ccc; */
+}
+.menu ul li a:hover{
+	/* background-color: transparent; */
+	color: #000;
+	/* text-shadow: 0px 1px 1px black; */
+}
+.dropdown li {
+	list-style: none;
+	padding: 7px;
+	margin-top: 7px;
+	margin-left: -10px;
+}
+.dropdown li a{
+
+	padding: 10px ;
+	border-radius: 5px;
+	/* background-color: #fff; */
+	text-decoration: none;
+
+}
+.dropdown li a:hover{
+	background-color: #eee;
+}
+.direitos{
+	z-index: 998;
+	position: fixed;
+	/* margin-top: 600px; */
+	bottom: 0px;
+
+	margin-left: -15px;
+}
+.direitos p{
+	color: #05a;
+	text-align: center;
+	font-size: 13px;
+}
+.bg-principal{
+	margin-top: 80px;
+	height: 100%;
+	position: fixed;
+	background-size: cover;
+	background-color: #fff;
+	box-shadow: -1px 0px 8px #aaa;
+	display: none;
+
+}
+.bg-principal h4{
+	margin-top: 30px;
+	color: #777;
+	text-align: center;
+}
+.bg-principal input{
+	margin-top: 30px;
+}
+.bg-principal .fechar{
+	margin-top: 20px;
+}
+.bg-principal .fechar a{
+	padding: 5px 10px ;
+	background-color: #FA8078;
+	border-radius: 15px;
+	/* border: 0.5px solid #fff; */
+	color: #fff;
+	text-decoration: none;
+}
+.bg-principal .fechar a:hover{
+	background-color: #FC584D;
+}
+
+.dropdown{
+	display: none;
+}
+.dropdown li {
+	list-style: none;
+}
+.dropdown li a{
+	text-decoration: none;
+}
+/*Informações*/
+.informacoes{
+	margin-top: 100px;
+	height: 562px;
+
+}
+
+
+/* } */

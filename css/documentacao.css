@@ -1,0 +1,108 @@
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #fff;
+}
+.header{
+	background-color: #2869a6;
+	position: fixed;
+	width: 100%;
+	z-index: 999;
+	box-shadow: 0px 1px 8px #000;
+}
+.header a{
+	color: #fff;
+	text-shadow: 0px 1px 1px black;
+}
+.bg-menu{
+	z-index: 998;
+	margin-top: 50px;
+	position: fixed;
+	margin-left: -30px;
+	/* background-color: #eee; */
+}
+.menu{
+	margin-top: 40px;
+	border-radius: 5px;
+	height: 663px;
+
+}
+.menu ul li a{
+	color: #05a;
+	/*text-shadow: 0px 1px 1px black;*/
+	/* border-bottom: 1px solid #ccc; */
+}
+.menu ul li a:hover{
+	/* background-color: transparent; */
+	color: #09a;
+	/* text-shadow: 0px 1px 1px black; */
+}
+.dropdown li {
+	list-style: none;
+	padding: 7px;
+	margin-top: 7px;
+	margin-left: -10px;
+}
+.dropdown li a{
+
+	padding: 10px ;
+	border-radius: 5px;
+	background-color: #fff;
+	text-decoration: none;
+
+}
+.dropdown li a:hover{
+	background-color: #eee;
+}
+
+.direitos{
+	z-index: 999;
+	position: fixed;
+	margin-top: 600px;
+	margin-left: -30px;
+}
+.direitos p{
+	color: #05a;
+	text-align: center;
+	font-size: 13px;
+}
+/*Documentacao*/
+.documentacao{
+	margin-top: 60px;
+}
+.documentacao h3{
+	padding: 20px;
+}
+.documentacao p{
+	padding: 10px;
+}
+.documentacao table{
+	font-size: 12px;
+}
+
+/*data extractor*/
+.data-extractor h3{
+	padding: 20px;
+}
+.data-extractor p{
+	text-align: justify;
+	margin-bottom: 20px;
+}
+.data-extractor .imagem-data img{
+	/*background-size: cover;*/
+	width: 500px;
+	height: 400px;
+}
+.data-extractor .imagem-data p, .select-obj p{
+	padding: 5px;
+	text-align: center;
+	font-size: 12px;
+	letter-spacing: .5px;
+}
+.data-extractor .select-obj img{
+	width: 500px;
+	height: 400px;
+}
+#data-extration{
+	padding-top: 30px;
+}
