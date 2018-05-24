@@ -41,9 +41,6 @@
         <div class="">
             <input type="button" id="cadastrar-projeto" class="btn btn-primary" value="Novo Projeto">
             
-        <div class="box1" style="height: 100px; background-color: #f9f9f9">
-		
-        </div>
         
     </div>
             <?php require('tabela/index.php')?>

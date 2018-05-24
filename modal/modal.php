@@ -1,6 +1,6 @@
 
-<div class="col-md-10 col-xs-12 bg-principal">
-	<form  id="formulario">
+<div class="col-md-10 col-xs-12 bg-principal" style="border-radius: 5px;">
+	<form method="GET"  id="form">
 		<h4>Cadastro de Projetos</h4>
 		<button type="button" class="btn btn fechar" style="position: absolute; margin-top:-50px; background-color: transparent; color: #fff; margin-left: 95%; border: 1px solid #fff;">&times;</button>
 
@@ -9,7 +9,7 @@
 			<hr>
 			<div class="col-md-5">
 				<span>Nome Projeto:</span>
-				<input type="text" name="nome-proj" class="form-control" >
+				<input type="text" name="nome" class="form-control" >
 			</div>
 
 			<div class="col-md-4">
@@ -61,7 +61,7 @@
 			</div>
 		
 		</div>
-		</form>
+		
 		<hr>
 		<div >
 			<h4>Anexar arquivo CSV extraido do AutoCad</h4>
@@ -70,4 +70,6 @@
 			<input type="submit" class="btn btn-success" id="gerar-relatorio" value="Gerar Relatório" style="width: 100%; margin-top: 20px; height:40px; border: 0;">
 			</div>
 		</div>
+		</form>
+		
 	</div>

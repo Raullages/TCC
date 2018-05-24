@@ -1,12 +1,26 @@
 <?php
-    $teste = array($_POST['dados']);
+    $nome_proj = strval($_GET['nome']);
+    $iptu = strval($_GET['iptu']);
+    $zoneamento = strval($_GET['zoneamento']);
+    $afast_latEsq = strval($_GET['afastamento_lateral_esq']);
+    $afast_latDir = strval($_GET['afastamento_lateral_dir']);
+    $afast_fundos = strval($_GET['afastamento_fundos']);
+    $afast_frente = strval($_GET['afastamento_frontal']);
+    $alt_maxima = strval($_GET['altura-maxima']);
+    
 
-    //$data = json_decode($teste);
+    echo  $nome_proj.'<br>'.
+          $iptu.'<br>'.
+          $zoneamento.'<br>'.
+          $afast_latEsq.'<br>'.
+          $afast_latDir.'<br>'.
+          $afast_fundos.'<br>'.
+          $afast_frente.'<br>'.
+          $alt_maxima.'<br>';
 
-    foreach($teste as $e){
-      var_dump($e->iptu);
-    }
+  // $json = json_encode($_GET);
 
+  // echo $json;
 
   //   include('./conexao/conexao.php');
   //   $arquivo = $_POST['codigo'];

@@ -45,22 +45,22 @@ $(document).ready(function(){
 	})
 	
 
-	$('#gerar-relatorio').bind('click', function(e){
+	$('#form').bind('submit', function(e){
+		e.preventDefault();
 		
-		var objeto = $('#formulario').serialize();
-
-		// console.log(objeto)
-
+		var objeto = $(this).serialize();
+		// console.log(objeto);
 		$.ajax({
-			url: 'informacoes.php/',
-			type: 'POST',
-			dataType: "json",
-			data: {
-				dados: objeto,
-			},
-			success: function (data) {
-				console.log(data);	
-			}
+			url: 'informacoes.php',
+			type: 'GET',
+			// dataType: 'json',
+			data: objeto,
+			success: (data) => {
+				$('.bg-body').fadeOut(150);	
+				$('.bg-principal').fadeOut(150);	
+
+					
+				}
 			});
 		});
 	
