@@ -14,16 +14,17 @@
 //  ?>
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+<link rel="stylesheet" href="../css/estilo.css">
 
     
     
-<div class="row table-responsive" id="relatorio" style="margin-top: 30px; background-color: #FFFFFF;border:1px solid #f8f8f8; padding:;">
+<div class="row table-responsive" id="relatorio" style="; background-color: #FFFFFF; padding:;">
     <div class="header-relatorio">
-        <h4>Cadastro de Projetos</h4>
-		<button type="button" id="close" class="btn btn-default" style="">&times;</button>
+        <h4>Relatório</h4>
+		<button type="button" id="close" class="btn fechar" style=""><i class="fas fa-times"></i></button>
     </div>
 
-    <table class="table table-bordered table-condensed" style="margin-top: 40px;">
+    <table class="table table-bordered table-condensed" style="margin-top: 8px;">
             <thead>
                 <tr>
                     <th class="text-center" style="background-color: #d2d2d2; color: #444; ">DADOS DO LOTE</th>
@@ -236,50 +237,6 @@
     </div>
     <style>
 
-.header-relatorio{
-    padding: 10px;
-    background-color: #397ab7;
-    border: 0px;
-}
-.header-relatorio{
-    color: #fff;
-}
-.header-relatorio #close{
-    position: absolute;
-    margin-top:-37px;
-    background-color: #397ab7;
-    color: #fff;
-    margin-left: 95%; 
-    border: 1px solid #f0f0f0;
-}
-/* Relatório */
-.tabela-cadastro, th, td{
-	font-size: 14px;
-	padding: 0px;
-	text-transform: capitalize;
-}
-#relatorio{
-	z-index: 999999;
-	position: fixed;
-	width: 1100px;
-	height: 662px;
-	background-color: #fff;
-	box-shadow: 0px 3px 14px black;
-	top: -30px;
-	left: 50%;
-	margin-left: -550px;
-	overflow-y: auto;
-    padding: 0px;
-    display: none;
-}
-.footer{
-    background-color: #d2d2d2;
-    width: 100%;
-    color: #fff;
-    position: relative;
-    bottom: 0px;
-    padding: 10px;
-}
     </style>
     
    

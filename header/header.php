@@ -17,7 +17,7 @@
     </div>
 </div>
 
-<div class="col-md-10 col-md-offset-2">
+<div class="col-md-10 col-md-offset-2" style="position:fixed">
     <header class="row header">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-1" aria-expanded="false">
@@ -37,13 +37,11 @@
     </header>
     <hr>
         
-    <div class="col-md-8">
-        <div class="">
+    <div class="col-md-8" >
+        <div> 
             <input type="button" id="cadastrar-projeto" class="btn btn-primary" value="Novo Projeto">
-            
-        
-    </div>
             <?php require('tabela/index.php')?>
+        </div>
             
     </div>
 
