@@ -113,15 +113,25 @@ body{
 .bg-principal{
 	display: none;
 	z-index: 9999999;
+<<<<<<< HEAD
 	position: absolute;
 	margin-top: 10px;
 	width: 1024px;
+=======
+	position: relative;
+	margin-top: 10px;
+	width: 1000px;
+>>>>>>> 8ea6609d8cb6c77e3128e4913bf519481d304e53
 	min-height: 642px;
 	background-color: #fff;
 	box-shadow: 0px 3px 14px black;
 	border-radius: 5px;
 	left: 50%;
+<<<<<<< HEAD
 	margin-left: -512px;
+=======
+	margin-left: -500px;
+>>>>>>> 8ea6609d8cb6c77e3128e4913bf519481d304e53
 	padding: 0px;
 	
 }
@@ -187,16 +197,26 @@ hr{
 	display: none;
 	z-index: 9999999;
 	position: relative;
+<<<<<<< HEAD
 	margin-top: 0px;
 	width: 900px;
+=======
+	margin-top: 10px;
+	width: 1000px;
+>>>>>>> 8ea6609d8cb6c77e3128e4913bf519481d304e53
 	height: 97%;
 	background-color: #fff;
 	box-shadow: 0px 3px 14px black;
 	border-radius: 5px;
 	left: 50%;
+<<<<<<< HEAD
 	margin-left: -450px;
 	padding: 0px;
 	border: 1px solid #eee;
+=======
+	margin-left: -500px;
+	padding: 0px;
+>>>>>>> 8ea6609d8cb6c77e3128e4913bf519481d304e53
 	
 }
 #relatorio .header-relatorio{
@@ -219,11 +239,20 @@ hr{
 }
 #relatorio .tabela-cadastro, th, td{
 	margin-top: 130px;
+<<<<<<< HEAD
 	font-size: 12px;
 	padding: 0;
 }
 #relatorio .footer{
     background-color: #397ab7;
+=======
+	font-size: 14px;
+	padding: 0px;
+	text-transform: capitalize;
+}
+#relatorio .footer{
+    background-color: #000;
+>>>>>>> 8ea6609d8cb6c77e3128e4913bf519481d304e53
     width: 100%;
     color: #fff;
     position: relative;

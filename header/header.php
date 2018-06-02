@@ -37,11 +37,18 @@
     </header>
     <hr>
         
+<<<<<<< HEAD
     <div class="col-md-12" >
         <div> 
             <button type="button" id="cadastrar-projeto" class="btn btn-primary" value="Novo Projeto"><i class="fa fa-plus"> </i> Novo Projeto</button>
             <button type="button" id="print" class="btn btn-success" ><i class="fa fa-check"> </i> Ver Relatório</button>
            
+=======
+    <div class="col-md-8" >
+        <div> 
+            <input type="button" id="cadastrar-projeto" class="btn btn-primary" value="Novo Projeto">
+            <?php require('tabela/index.php')?>
+>>>>>>> 8ea6609d8cb6c77e3128e4913bf519481d304e53
         </div>
             
     </div>
