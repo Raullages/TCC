@@ -111,30 +111,31 @@ body{
 	font-size: 13px;
 }
 .bg-principal{
-	z-index: 999999;
-	position: fixed;
-	width: 1000px;
-	height: 650px;
+	display: none;
+	z-index: 9999999;
+	position: absolute;
+	margin-top: 10px;
+	width: 1024px;
+	min-height: 642px;
 	background-color: #fff;
 	box-shadow: 0px 3px 14px black;
-	top: 50%;
-	margin-top: -300px;
+	border-radius: 5px;
 	left: 50%;
-	margin-left: -500px;
-	display: none;
+	margin-left: -512px;
 	padding: 0px;
 	
 }
-.bg-principal h4{
-	background-color: #397ab7;
-	padding: 15px;
-	margin-top: 0px;
+.bg-principal .header-relatorio{
+	padding: 10px;
+    background-color: #397ab7;
+	border-radius: 5px 5px 0 0;
 	color: #fff;
-	text-transform: uppercase;
-	text-align: left;
-	font-size: 14px;
-	margin-left: 0px;
-	font-family: Arial, Helvetica, sans-serif;
+	/* position: fixed; */
+	width: 100%;
+	z-index: 999999;
+}
+.bg-principal h4{
+	text-align: center
 }
 .bg-principal .info-zoneamento, .dados-projeto{
 	padding: 5px;
@@ -145,7 +146,7 @@ body{
 	padding: 10px;
 	margin-top: 0px;
 	color: #333;
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 	text-align: left;
 	font-size: 14px;
 	margin-left: 0px;
@@ -181,5 +182,54 @@ hr{
 #cadastrar-projeto{
 	border-radius: 2px;
 }
+/* Relatório */
+#relatorio{
+	display: none;
+	z-index: 9999999;
+	position: relative;
+	margin-top: 0px;
+	width: 900px;
+	height: 97%;
+	background-color: #fff;
+	box-shadow: 0px 3px 14px black;
+	border-radius: 5px;
+	left: 50%;
+	margin-left: -450px;
+	padding: 0px;
+	border: 1px solid #eee;
+	
+}
+#relatorio .header-relatorio{
+    padding: 10px;
+    background-color: #397ab7;
+	border: 0px;
+	color: #fff;
+	/* position: fixed; */
+	width: 100%;
+	z-index: 999999;
+}
+.fechar{	
+    
+	margin-top:-80px;
+	padding: 0px 5px;
+	font-weight: bold;
+    background-color: transparent;
+    
+    margin-left: 97%;
+}
+#relatorio .tabela-cadastro, th, td{
+	margin-top: 130px;
+	font-size: 12px;
+	padding: 0;
+}
+#relatorio .footer{
+    background-color: #397ab7;
+    width: 100%;
+    color: #fff;
+    position: relative;
+    bottom: 0px;
+    padding: 10px;
+}
+
 
 /* } */

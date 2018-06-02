@@ -2,6 +2,14 @@ $(document).ready(function(){
 
 	$('[data-toggle="tooltip"]').tooltip();
 
+	$('#iptu').mask('99.999.999-99');
+	$('#cotas1').mask('9.99');
+	$('#cotas2').mask('9.99');
+	$('#cotas3').mask('9.99');
+	$('#cotas4').mask('9.99');
+	$('#cotas5').mask('9.99');
+
+
 	$('#hover').click(function(){
 		$('.dropdown').toggle("show");
 	});
@@ -14,29 +22,25 @@ $(document).ready(function(){
 		$('#data-extration').animatescroll({scrollSpeed:500});
 	})
 
-
-
 	$('#cadastrar-projeto').bind('click', function(){
-		$('.bg-principal').animate({
-			height: 'toggle'
-		});
-		$('.bg-principal').css({"display": "inline-block"});
-		$('.bg-body').fadeIn(300);
-		$(".bg-body").css({"display": "inline-block"})
+		$('.bg-principal').fadeIn('fast')
+		$('.bg-body').fadeIn('fast');
 	});
 
 	$('.fechar').bind('click', function(){	
-		$('.bg-principal').animate({height: 'toggle'});
-		$('.bg-body').fadeOut(300);
+		$('.bg-principal').fadeOut('fast');
+		$('.bg-body').fadeOut('fast');
+		$('#relatorio').fadeOut('fast');
 	});
 
-	$('#close').bind('click', function(){
-		$('#relatorio').css('display','none')
-	})
+	// $('#close').bind('click', function(){
+	// 	$('#relatorio').css('display','none')
+	// })
 
 	$('.bg-body').bind('click', function(){	
-		$('.bg-principal').fadeOut(300);
-		$('.bg-body').fadeOut(300);
+		$('.bg-principal').fadeOut('fast');
+		$('.bg-body').fadeOut('fast');
+		$('#relatorio').fadeOut('fast');
 	});
 
 	$('#tabela').bind('click', function(){
@@ -45,42 +49,70 @@ $(document).ready(function(){
 	})
 	
 
-	$('#form').bind('submit', function(e){
-		e.preventDefault();
+	// $('#form').bind('submit', function(e){
+	// 	e.preventDefault();
 		
-		var objeto = $(this).serialize();
+	// 	var objeto = $(this).serialize();
+	// 	 console.log(objeto);
+	// 	$.ajax({
+	// 		url: 'informacoes.php',
+	// 		type: 'POST',
+	// 	 dataType: 'json',
+	// 		data: objeto,
+	// 		success: (data) => {
+	// 			$('.bg-principal').fadeOut(150);
+	// 			$('.bg-body').fadeOut(150);	
+	// 			alert("Cadastrado Paramentro Urbanisticos");
+					
+	// 		}
+	// 	});
+	// });
+	
+
+	// Enviar Informações do projeto para o banco para o banco
+	$('#infoProjeto').bind('submit', function(e){
+		e.preventDefault();
+		$('.bg-principal').fadeOut('fast')
+		$('.bg-body').fadeIn('fast');
+		$('.carregando').fadeIn('fast');
+
+		var objeto = $("#infoProjeto").serialize();
+		var dwg_csv = $('#abrir-csv').val();
+
 		// console.log(objeto);
+	
 		$.ajax({
-			url: 'informacoes.php',
-			type: 'GET',
+			url: 'requisicao/informacoes.php',
+			type: 'POST',
 			// dataType: 'json',
 			data: objeto,
 			success: (data) => {
-				$('.bg-body').fadeOut(150);	
-				$('.bg-principal').fadeOut(150);	
-
-					
-				}
-			});
+				console.log("Cadastrado com sucesso!");	
+			}
 		});
-	
+
+		$.ajax({
+			url: 'requisicao/arquivo.php',
+			type: 'POST',
+			// dataType: 'json',
+			data: 'codigo='+dwg_csv,
+			success: (dados) => {
+				$('.carregando').fadeOut(150);
+				$('.bg-body').fadeOut(150);
+				// $('#relatorio').fadeIn('slow');
+				console.log("Cadastrado com sucesso!",dados)
+				location.reload();	
+			}
+		});
+
+	});
+	$('#print').bind('click',function(){
+		// console.log(`clicou`);
+		$('.bg-body').fadeIn();
+		$('#relatorio').fadeIn();
+	})
 
 
-	// $('#gerar-relatorio').bind('click', function(){
-		
-	// 	var dwg_csv = $('#abrir-csv').val();
-
-	// 	$.post('./informacoes.php', {
-	// 		codigo: dwg_csv,
-
-	// 	},function(data) {
-	// 		$('.carregando').css('display','none');
-	// 		$('.bg-body').css('display','none');
-	// 		alert('Cadastrado com sucesso!');
-
-	// 	});
-	// 	return false;
-	// });
 });
 
 

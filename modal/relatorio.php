@@ -11,7 +11,28 @@
 // 				$areaLote = $areaCorreta/10000;
 
 // 				$areaCorrigida = number_format($areaLote, 2);
-//  ?>
+
+$resultado = $conexao->query("SELECT * FROM dadosrelatorios d, projeto p WHERE p.layer = 'Loteamento' or p.layer = 'CadastroCP' or p.layer = 'Edificacao' ");
+$row = mysqli_num_rows($resultado);
+    
+    if ($row > 0){
+            while($row = mysqli_fetch_array($resultado))
+            {
+                $nome_proj = $row['nomeRelatorio'];
+                $layer = $row['layer'];
+                $length = $row['length'];
+                $area = $row['area'];
+                $iptu = $row['iptu'];
+                $zoneamento = $row['zoneamento'];
+                $afast_latEsq = $row['afastamento_lateral_esq'];
+                $afast_latDir = $row['afastamento_lateral_dir'];
+                $afast_fundos = $row['afastamento_fundos'];
+                $afast_frente = $row['afastamento_frontal'];
+                $alt_maxima = $row['altura_maxima'];
+
+
+
+?>
 
 
     <link rel="stylesheet" href="../css/estilo.css">
@@ -39,14 +60,14 @@
                                </tr>
                             </thead>
                             <tbody>
-                                    <tr>
-                                <td >RAUL LAGES</td>
-                                <td >ZUR 1</td>
-                                <td >1293891830182903 </td>
-                                <td>275.00</td>     
-                                <td>275.00</td>
-                                
-                                <!-- <td colspan="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora laboriosam tenetur esse dolorem. Asperiores recusandae voluptates ipsa assumenda illum. Ad, vero laborum. Earum veniam quam quo et doloribus. Ipsa, asperiores!</td> -->
+                                <tr>
+                                    <td ><?php echo $nome_proj ?></td>
+                                    <td ><?php echo $zoneamento ?></td>
+                                    <td ><?php echo $zoneamento ?></td>
+                                    <td><?php echo $zoneamento ?></td>     
+                                    <td><?php echo $zoneamento ?></td>
+                                    
+                                    <!-- <td colspan="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora laboriosam tenetur esse dolorem. Asperiores recusandae voluptates ipsa assumenda illum. Ad, vero laborum. Earum veniam quam quo et doloribus. Ipsa, asperiores!</td> -->
                                 </tr>
                                 
                             </tbody>
@@ -152,9 +173,7 @@
             </td>
             </tbody>
         </table>
-        <!-- Validação de Area Permeavel e Vagas -->
-                  
-    
     </div>
+            <?php } ?>
     
                    

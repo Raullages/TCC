@@ -14,7 +14,7 @@
 
 		$tempo = (strtotime($agora)-strtotime($salvaData));
 
-		if($tempo >= 600){
+		if($tempo >= 2000){
 			session_destroy();
 			echo "<script>alert('Finalizando Sessão')
 			location.href = 'index1.php';
