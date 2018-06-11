@@ -4,7 +4,7 @@
             <li class="nav-item active"><a href="index.php" class="nav-link">Ínicio</a></li>
             <li class="nav-item"><a href="#" id="hover" class="nav-link">Regras <span class="caret"></span></a>
                 <ul class="dropdown">
-                    <li><a href="Documentacao.php">Documentacao</a></li>
+                    <li><a href="">Documentacao</a></li>
                     <li><a href="" id="data-extration">Data Extraction</a></li>
                 </ul>
             </li>
@@ -37,16 +37,22 @@
     </header>
     <hr>
         
-    <div class="col-md-12 ">
-    <img src="img/projeto.jpg"  class="bg-inicial" alt="">
-        <div class="botoes-novo">
+<<<<<<< HEAD
+    <div class="col-md-12" >
+        <div> 
             <button type="button" id="cadastrar-projeto" class="btn btn-primary" value="Novo Projeto"><i class="fa fa-plus"> </i> Novo Projeto</button>
             <button type="button" id="print" class="btn btn-success" ><i class="fa fa-check"> </i> Ver Relatório</button>
+           
+=======
+    <div class="col-md-8" >
+        <div> 
+            <input type="button" id="cadastrar-projeto" class="btn btn-primary" value="Novo Projeto">
+            <?php require('tabela/index.php')?>
+>>>>>>> 8ea6609d8cb6c77e3128e4913bf519481d304e53
         </div>
+            
     </div>
-    <div class="col-md-12" style="margin-top: 70px;">
-        <?php require('tabela/lista_projetos.php') ?>
-    </div>
+
 			
 </div>
 	

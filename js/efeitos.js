@@ -3,11 +3,15 @@ $(document).ready(function(){
 	$('[data-toggle="tooltip"]').tooltip();
 
 	$('#iptu').mask('99.999.999-99');
+<<<<<<< HEAD
 	$('#cotas1').mask('9.99');
 	$('#cotas2').mask('9.99');
 	$('#cotas3').mask('9.99');
 	$('#cotas4').mask('9.99');
 	$('#cotas5').mask('9.99');
+=======
+	$('#cotas').mask('9.99' ,'placeholder: .  .   .  -  ');
+>>>>>>> 8ea6609d8cb6c77e3128e4913bf519481d304e53
 
 
 	$('#hover').click(function(){
@@ -51,6 +55,7 @@ $(document).ready(function(){
 
 	// $('#form').bind('submit', function(e){
 	// 	e.preventDefault();
+<<<<<<< HEAD
 		
 	// 	var objeto = $(this).serialize();
 	// 	 console.log(objeto);
@@ -99,36 +104,80 @@ $(document).ready(function(){
 			success: (dados) => {
 				$('.carregando').fadeOut(150);
 				$('.bg-body').fadeOut(150);
-				$('.modal-confirmacao').addClass('animated fadeInDown')
-				$('.modal-confirmacao').css({
-					'display': 'inline-block',
-					'margin-top': '15px'
-				})
-
-				setTimeout(function(){
-					$('.modal-confirmacao').addClass('fadeOutUp')
-					console.log("passou aqui")
-				},2000);
-
-				setTimeout(function(){
-					console.log('impressao antes do reload');
-					location.reload(true)	
-				},2800);
-				
-				setTimeout(function(){
-					$.post('impressao.php', function(){});
-				})
+				// $('#relatorio').fadeIn('slow');
+				console.log("Cadastrado com sucesso!",dados)
+				location.reload();	
 			}
 		});
-		
 
 	});
 	$('#print').bind('click',function(){
+		// console.log(`clicou`);
 		$('.bg-body').fadeIn();
 		$('#relatorio').fadeIn();
-		
 	})
+=======
+		
+	// 	var objeto = $(this).serialize();
+	// 	 console.log(objeto);
+	// 	$.ajax({
+	// 		url: 'informacoes.php',
+	// 		type: 'POST',
+	// 	 dataType: 'json',
+	// 		data: objeto,
+	// 		success: (data) => {
+	// 			$('.bg-principal').fadeOut(150);
+	// 			$('.bg-body').fadeOut(150);	
+	// 			alert("Cadastrado Paramentro Urbanisticos");
+					
+	// 		}
+	// 	});
+	// });
+	
+	$('#form').bind('submit', function(e){
+		e.preventDefault();
+		
+		$('.carregando').fadeIn('fast')
+		// $('.carregando').css({"display": "inline-block"});
+		$('.bg-body').fadeIn('fast');
+		$('.bg-principal').fadeOut('fast');
+		$('.carregando').fadeOut('fast');
+		$('#relatorio').fadeIn('fast');
+		// $(".bg-body").css({"display": "inline-block"})
 
+		// e.preventDefault();
+		// var objeto = $("#form").serialize();
+		// var dwg_csv = $('#abrir-csv').val();
+
+		// console.log(objeto);
+		// console.log(dwg_csv);
+
+
+		// $.post('informacoes.php', {
+		// 	codigo: dwg_csv,
+		// },function(data) {
+		// 	$('.carregando').css('display','none');
+		// 	$('.bg-body').css('display','none');
+		// 	alert("Cadastrado CSV")	
+		// });
+		// return false;
+
+		
+		// console.log(objeto);
+		// $.ajax({
+		// 	url: 'informacoes.php',
+		// 	type: 'POST',
+		// 	// dataType: 'json',
+		// 	data: objeto,
+		// 	success: (data) => {
+		// 		$('.bg-principal').fadeOut(150);
+		// 		$('.bg-body').fadeOut(150);	
+		// 		alert("Cadastrado Paramentro Urbanisticos");
+					
+		// 	}
+		// });
+	});
+>>>>>>> 8ea6609d8cb6c77e3128e4913bf519481d304e53
 
 
 });
