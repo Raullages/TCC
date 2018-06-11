@@ -19,24 +19,24 @@
   </head>
   <body>
   <div class="container">
-      <div class="col-md-4">
-        <form class="" action="validacao.php" name="login" method="post">
+      <div class="col-md-4 col-xs-12">
+        <form action="validacao.php" name="login" method="post">
           <div class="bg-box form-group">
               <h3>Login</h3>
               <hr>
-              <div class="col-md-12 usuario">
+              <div class="usuario">
                   <label for="">Usuário:</label>
                   <input type="text" name="nome" value="" class="form-control" placeholder="Usuário">
               </div>
-              <div class="col-md-12 senha">
+              <div class="senha">
                 <label for="">Senha: </label>
                 <input type="password" name="senha" value="" class="form-control" placeholder="Senha">
 
               </div>
-              <div class="col-md-12 enviar">
+              <div class="enviar">
                 <button type="submit" name="button" class="btn" id="enviar">Enviar</button>
               </div>
-              <div class="col-md-12 cadastrar">
+              <div class="cadastrar">
                   <a href="login/cadastrar_rt.php">Cadastrar Responsável Técnico</a>
               </div>
           </div>
@@ -45,7 +45,7 @@
         </form>
       </div>
 
-      <div class="col-md-8 jumbotrom">
+      <div class="col-md-8 col-xs-12 jumbotron">
           <h3>Bem vindo ao Análise de Projetos</h3>
           <p>O APA (Ánalise de projetos arquitetônicos) auxilia o profissional a revisar seu projeto, para que o mesmo seja aprovado
           com uma certa facilidade junto a prefeitura do municipio</p>

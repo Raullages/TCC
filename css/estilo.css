@@ -1,4 +1,4 @@
-/* @media only screen and  (min-width: 1024px) and (max-width: 1920px) { */
+@media only screen and  (min-width: 1024px) and (max-width: 1920px) {
 
 body{
 	margin: 0;
@@ -13,25 +13,29 @@ body{
 	background-color: rgba(0,0,0, 0.8);
 	z-index: 999;
 	display: none;
+	
 }
 .carregando{
 	width: 100%;
 	height: 100%;
-	position: fixed;
-	background-color: rgba(255,255,255, 0.8);
+	position: absolute;
+	background-color: rgba(0,0,0, 0.8);
 	z-index: 99999999999999;
 	display: none;
-
+	margin: 0px;
+	text-align: center;
 }
-.carregando img{
-	position: absolute;
-	width: 250px;
-	height: 250px;
-	left: 50%;
-	margin-left: -125px;
+.carregando h3{
 	top: 50%;
-	margin-top: -125px;
-
+	margin-top: -25px;
+	
+	/* font-size: 35px; */
+	text-align: center;
+	color: #fff;
+	height: 50px;
+	/* border: 1px solid #fff; */
+	position: relative;
+	padding: 10px;
 }
 .icon-bar{
 	background-color: #fff;
@@ -231,5 +235,64 @@ hr{
     padding: 10px;
 }
 
+.bg-inicial{
+	background-size: cover;
+	width: 100%;
+	position: fixed;
+	margin-left: -30px;
+	margin-top: -30px;
+	opacity: 0.2;
+}
+.botoes-novo{
+	position: relative;
+}
+.painel-info{
+	border: 1px solid #397ab7;
+	border-left: 10px solid #397ab7;
+	background-color: #e9f4ff;
+	margin: 8px;
+	padding-left: 15px;
+	
+	font-size: 12px;
+	
+}
+.painel-danger{
+	border: 1px solid #e00;
+	border-left: 10px solid #e00;
+	background-color: rgb(250, 232, 225);
+	margin: 8px;
+	padding-left: 15px;
+	font-size: 12px;
+}
+.painel-warning{
+	border: 1px solid rgb(243, 181, 65);
+	border-left: 10px solid rgb(243, 181, 65);
+	background-color: rgb(255, 243, 220);
+	margin: 8px;
+	padding-left: 15px;
+	font-size: 12px;
+}
 
-/* } */
+.modal-confirmacao{
+    position: absolute;
+    width: 500px;
+    height: 90px;
+    background-color: rgba(50, 185, 50, 0.8);
+    box-shadow: 0px 1px 5px black;
+    border-bottom: 5px solid green;
+    left: 50%;
+    margin-left: -250px;
+	display: none;
+	z-index: 999999999;
+}
+.modal-confirmacao h3{
+    text-align: center;
+    color: #fff;
+}
+.modal-confirmacao i{
+    border: 1px solid #fff;
+    border-radius: 50px;
+    padding: 5px;
+}
+
+}

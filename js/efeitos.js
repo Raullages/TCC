@@ -99,18 +99,36 @@ $(document).ready(function(){
 			success: (dados) => {
 				$('.carregando').fadeOut(150);
 				$('.bg-body').fadeOut(150);
-				// $('#relatorio').fadeIn('slow');
-				console.log("Cadastrado com sucesso!",dados)
-				location.reload();	
+				$('.modal-confirmacao').addClass('animated fadeInDown')
+				$('.modal-confirmacao').css({
+					'display': 'inline-block',
+					'margin-top': '15px'
+				})
+
+				setTimeout(function(){
+					$('.modal-confirmacao').addClass('fadeOutUp')
+					console.log("passou aqui")
+				},2000);
+
+				setTimeout(function(){
+					console.log('impressao antes do reload');
+					location.reload(true)	
+				},2800);
+				
+				setTimeout(function(){
+					$.post('impressao.php', function(){});
+				})
 			}
 		});
+		
 
 	});
 	$('#print').bind('click',function(){
-		// console.log(`clicou`);
 		$('.bg-body').fadeIn();
 		$('#relatorio').fadeIn();
+		
 	})
+
 
 
 });

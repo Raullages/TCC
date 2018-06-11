@@ -50,7 +50,7 @@
         </form>
       </div>
 
-      <div class="col-md-8 jumbotrom">
+      <div class="col-md-8 jumbotron">
           <h3>Cadastro de Responsável Técnico</h3>
           <p>Nessa parte o Responsável Técnico faz o seu cadastro e assim pode anexar e analisar projetos para maior facilidade</p>
 

@@ -15,10 +15,13 @@ require_once("validando_sessao.php");
 	<!-- <link rel="icon" href="" type="imagem/jpg"> -->
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/estilo.css">
+	<!-- <link rel="stylesheet" href="css/documentacao.css"> -->
 	<!-- <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" crossorigin="anonymous"></script> -->
 	<link href="./fontawesome/fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.min.css" rel="stylesheet">
+	<link href="../../fontawesome/fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
-
+	
 	<!-- <link rel="stylesheet" href="css/smartphones.css"> -->
 	<!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
 	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"> -->
@@ -30,8 +33,12 @@ require_once("validando_sessao.php");
 <div class="bg-body"></div>
 <!-- tela de loading  -->
 <div class="container-fluid carregando">
-	<img src="img/loading-bar.gif" alt="carregando...">
+<h3>
+	<i class="fas fa-spinner fa-pulse"></i> 
+	Carregando...
+</h3>
 </div>
+<div class="modal-confirmacao animated"><h3><i class="fa fa-check"></i> Relatório Gerado com Sucesso !</h3></div>
 
 <!-- Menu Lateral fixo  -->
 <div class="row-fluid" style="">
@@ -42,9 +49,7 @@ require_once("validando_sessao.php");
 
 	<!-- Modal de exibição do relatorio -->
 	<?php require('modal/relatorio-modal.php') ?>
-	<!-- tabela selects -->
 	
-
 </div>
 
 <!-- Scripts javascript  -->
@@ -52,9 +57,9 @@ require_once("validando_sessao.php");
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"  crossorigin="anonymous"></script>
 
 <script defer src="./fontawesome/fontawesome-free-5.0.13/svg-with-js/js/fontawesome-all.min.js" crossorigin="anonymous"></script>
-	
-
 <script type="text/javascript" src="js/efeitos.js"></script>
+
+
 <script type="text/javascript" src="js/jquery.mask.min.js"></script>
 <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
 </body>

@@ -2,12 +2,12 @@
 <?php 
 include('./conexao/conexao.php'); 
 include('./tabela/index.php'); 
-
+// include_once('./impressao.php');
 ?>
     <div class="header-relatorio">
         <h4>Relatório</h4>
 		<button type="button" id="close" class="btn fechar" style=""><i class="fas fa-times"></i></button>
-		<button type="button" id="printer" class="btn btn-default" style="float: right; width: 100px;"><i class="fas fa-print"></i></button>
+		<a href="./impressao.php" target="_blank" type="button" id="printer" class="btn btn-default" style="float: right; width: 100px;"><i class="fas fa-print"></i></a>
         <div style="clear: both; "></div>
     </div>
 
@@ -41,7 +41,7 @@ include('./tabela/index.php');
                             <!-- Area edificação -->
                                         <td class="text-center"><?php echo $area_edificacao ?> m²</td>
                                         <td class="text-center"><?php echo $area_lote_real ?> m²</td>     
-                                        <td class="text-center"><?php echo $area_cp ?> m²</t>
+                                        <td class="text-center"><?php echo $area_cp ?> m²</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -49,7 +49,16 @@ include('./tabela/index.php');
                 </tr>
             </tbody>
         </table>
-                    
+            <div class="painel-info">
+                <h5>Zonas de Uso Preferencialmente Residencial 1</h5>
+                <p>Áreas a serem ocupadas com baixa densidade, com predominância de lotes >= a 200m² e <= 360m².</p>
+            </div>
+            <div class="painel-danger">
+                <h5>Zonas de Uso Preferencialmente Residencial 1</h5>
+                <p>Áreas a serem ocupadas com baixa densidade, com predominância de lotes >= a 200m² e <= 360m².</p>
+            </div>
+
+
         <table class="table table-bordered table-condensed">
             <thead>
                 <tr>
@@ -285,16 +294,13 @@ include('./tabela/index.php');
                     </td>
                 </tr>
             </tbody>
-        
         </table>
-
+        
+        
+           
+       
         
     </div>
-    <style>
-
-    </style>
-    
-   
                     
                         
                    

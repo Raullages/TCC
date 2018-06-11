@@ -7,6 +7,8 @@
     $arquivo = $_POST['codigo'];
     $row = 1;
 
+        $conexao->query("TRUNCATE TABLE projeto");
+
         if (($handle = fopen($arquivo, "r")) !== FALSE)
         {
           //Passagem pelas linhas

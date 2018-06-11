@@ -14,6 +14,7 @@
 
 		if(!strcmp($valida_senha, $row['senha'])){
 			$_SESSION['nome_usuario'] = $row['nome'];
+			$_SESSION['id_usuario'] = $row['id'];
 			$_SESSION['ultimoAcesso'] = date('d-m-Y H:i');
 
 			header("Location: index.php");
