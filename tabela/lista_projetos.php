@@ -1,48 +1,103 @@
 <?php 
+require('./conexao/conexao.php');
 
-$result = $conexao->query("SELECT * FROM documentos WHERE nome = '".$_SESSION['nome_usuario']."'");
+$result = $conexao->query("SELECT * FROM dadosrelatorios WHERE nomeResp = '".$_SESSION['nome_usuario']."'");
 $linha = mysqli_num_rows($result);
 
 ?>
-<div class="col-md-12">
-<table class="table table-bordered table-condensed">
-    <thead>
-        <tr>
-            <th class="text-center" style="background-color: #f0f0f0;">Lista de Projetos</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr> 
-            <td>
-                <table class="table table-bordered table-condensed">
-                    <thead>
-                        <tr>
-                            <th>Id</th>
-                            <th>Nome</th>
-                            <th>Path</th>
-                        </tr>
-                            <?php  
-                            if ($linha > 0){
-                                while($linha = mysqli_fetch_array($result))
-                                { 		
- 
-                                $id = $linha['id'];
-                                $nome = $linha['nome'];
-                                $path = $linha['path'];
-                                ?>
-                                    <tr>
-                                        <td><?php echo $id ?></td>
-                                        <td><?php echo $nome ?></td>
-                                        <td><a href="" class="btn btn-success"><?php $path ?>Baixar</a></td>
-                                    </tr>
-                                <?php }} ?>
-                    </thead>
-                </table>
-            </td>
-        
-        </tr>
-        
-    </tbody>
-</table>
+<div class="col-xs-12" >
+    <div class="col-xs-12 cabecalho" >
+        <div class="col-md-3" >
+            <p>Nome Resp</p>
+        </div>
+        <div class="col-md-2" >
+            <p>IPTU</p>
+        </div>
+        <div class="col-md-2" >
+            <p>Zoneamento</p>
+        </div>
+        <div class="col-md-2" >
+            <p>Uso</p>
+        </div>
+        <div class="col-md-1" >
+            <p>Status</p>
+        </div>
+        <div class="col-md-1" >
+            <p>Visualizar</p>
+        </div>
+        <div class="col-md-1" >
+            <p>Download</p>
+        </div>
+    </div>
+    <?php  if ($linha > 0){
+        while($linha = mysqli_fetch_array($result)) {   ?>
+            <div class="col-xs-12 corpo-tabela" id="<?php echo $linha['idRelatorio'] ?>">
+                <div class="col-md-3" >
+                    <p><?php echo $linha['nomeRelatorio']; ?></p>
+                </div>
+                <div class="col-md-2" >
+                    <p><?php echo $linha['iptu']; ?></p>
+                </div>
+                <div class="col-md-2" >
+                    <p><?php echo $linha['zoneamento']; ?></p>
+                </div>
+                <div class="col-md-2" >
+                    <p><?php echo $linha['uso']; ?></p>
+                </div>
+                <div class="col-md-1" >
+                    <p>tesste</p>
+                </div>
+                <div class="col-md-1" >
+                    <p>teset</p>
+                </div>
+                <div class="col-md-1" >
+                    <p>tesets</p>
+                </div>
+            </div>
+            
+    <?php } ?>
+
 
 </div>
+
+    <div id="corpo-info">
+        <div class="col-md-4 animated fadeInDown mostrar">
+            
+        </div>
+    </div>
+    <?php } ?>
+<style type="text/css">
+    .cabecalho{
+        border: 0.5px solid #eee;
+        cursor: default;
+        background: #fff;
+    }
+    .cabecalho div p{
+        text-align: center;
+        margin: 2px;
+    }
+    .corpo-tabela{
+        border: 0.5px solid #eee;
+        cursor: default;
+        background-color: #fff;
+        padding: 5px;
+    }
+    .corpo-tabela:hover{
+        background-color: #ddd;
+    }
+    .corpo-tabela div p{
+        text-align: left;
+        margin: 2px;
+    }
+    #corpo-info div{
+        display: none;
+        height: 100%;
+        position: fixed;
+        border: 1px solid #eee;
+        cursor: default;
+        background-color: #f9f9f9;
+        margin-top: -155px;
+        left: 67%;
+        box-shadow: 0px 4px 15px black;
+    }
+</style>
